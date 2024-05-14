@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
 import BlogPost from './components/BlogPost';
-import SkillsHeader from './components/SkillsHeader';
+import Header from './components/Header';
 import SkillsSection from './components/SkillsSection';
+import Footer from './components/common/Footer';
+
 function App() {
   return (
     <div className="App">
-         <SkillsHeader />
+         <Header />
          <SkillsSection/>
       <BlogPost />
       <BlogPost />
       <BlogPost />
+      <Footer/>
     </div>
   );
 }

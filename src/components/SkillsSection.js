@@ -3,10 +3,12 @@ import './SkillsSection.css';
 import SkillsCard from './SkillsCard';
 
 const skillsData = [
-  { name: 'React', image: 'spring.png' },
-  { name: 'Redux', image: 'java.png' },
-  { name: 'scss', image: 'redis.png' },
-  { name: 'typescript', image: 'redis.png' },
+  { name: 'React', image: 'react.png' },
+  { name: 'Redux', image: 'redux.png' },
+  { name: 'Vanilla JS', image: 'van.png' },
+  { name: 'scss', image: 'scss.png' },
+  { name: 'typescript', image: 'type.png' },
+
 
 ];
 
