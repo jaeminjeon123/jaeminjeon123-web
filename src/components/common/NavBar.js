@@ -43,6 +43,11 @@ const useTypingEffect = (textArray, typingSpeed = 150, pauseDuration = 2000) => 
 
 const Navbar = () => {
   const logoText = useTypingEffect(['JunJaeMin', 'Frontend Developer'], 150, 5000);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -55,21 +60,21 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth',
       });
+      setMenuOpen(false); // 섹션으로 스크롤 후 메뉴 닫기
     }
   };
-  
 
   return (
     <nav className="navbar">
       <div className="logo">{logoText}</div>
-      <ul className="nav-links">
+      <div className="menu-icon" onClick={toggleMenu}>☰</div>
+      <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <li onClick={() => scrollToSection('home')}>Home</li>
-        <li onClick={() => scrollToSection('skills')}>skills</li>
+        <li onClick={() => scrollToSection('skills')}>Skills</li>
         <li onClick={() => scrollToSection('education')}>Education</li>
         <li onClick={() => scrollToSection('certification')}>Certification & Awards</li>
         <li onClick={() => scrollToSection('projects')}>Side Projects</li>
-        <li onClick={() => scrollToSection('blog')}>My Blog</li>
-        <li onClick={() => scrollToSection('Contact')}>Contact</li>
+        <li onClick={() => scrollToSection('contact')}>Contact</li>
       </ul>
     </nav>
   );

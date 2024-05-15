@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Education.module.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Education = () => {
   const educationData = [
     {
@@ -18,27 +19,25 @@ const Education = () => {
   ];
 
   return (
-    <section id='education' className={styles.education }>
-  
+    <section id='education' className={styles.education}>
       <h2>Education</h2>
       <div className={styles.educationList}>
         {educationData.map((edu, index) => (
           <div key={index} className={styles.educationItem}>
-            <div className={styles.educationIcon}>
+            <div className={styles.educationHeader}>
               <i className="fas fa-graduation-cap"></i>
+              <span className={styles.educationYear}>{edu.year}</span>
             </div>
             <div className={styles.educationContent}>
-              <span className={styles.educationYear}>{edu.year}</span>
+            <h4 className={styles.educationSchool}>{edu.school}</h4>
               <h3 className={styles.educationDegree}>{edu.degree}</h3>
-              <h4 className={styles.educationSchool}>{edu.school}</h4>
+             
               <p className={styles.educationDescription}>{edu.description}</p>
             </div>
           </div>
         ))}
       </div>
-      
     </section>
-   
   );
 };
 

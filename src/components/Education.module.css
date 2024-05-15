@@ -1,57 +1,71 @@
 .education {
   padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 700px;
-    height: 100%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100%;
 }
 
 .education h2 {
-  font-size: 2em;
-  color: #007bff;
+  font-size: 24px;
+  color: #a69eb0;
   margin-bottom: 20px;
 }
 
-.education-list {
+.educationList {
   list-style: none;
   padding: 0;
 }
 
-.education-item {
+.educationItem {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* 구분선 추가 */
 }
 
-.education-icon {
+.educationItem:last-child {
+  border-bottom: none; /* 마지막 아이템에는 구분선 없음 */
+}
+
+.educationHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.educationHeader i {
   font-size: 2em;
   color: #007bff;
-  margin-right: 20px;
+  margin-right: 10px;
+  align-self: flex-start; /* 아이콘을 텍스트의 시작점에 맞추기 위해 추가 */
 }
 
-.education-content {
-  flex: 1;
+.educationContent {
+  text-align: left; /* 텍스트 정렬 */
 }
 
-.education-year {
+.educationYear {
   font-size: 1.2em;
   font-weight: bold;
   color: #555;
 }
 
-.education-degree {
-  font-size: 1.5em;
+.educationDegree {
+  font-size: 1em;
   margin: 5px 0;
   color: #333;
 }
 
-.education-school {
-  font-size: 1.2em;
+.educationSchool {
+  font-size: 1em;
   margin: 5px 0;
   color: #666;
 }
 
-.education-description {
+.educationDescription {
   font-size: 1em;
   color: #777;
 }
