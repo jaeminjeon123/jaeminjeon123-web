@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .nav-links li {
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .navbar .nav-links li:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  section {
+    padding: 60px 20px;
+    height: 10px;
+  }

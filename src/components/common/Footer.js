@@ -8,7 +8,9 @@ const Footer = () => {
   };
 
   return (
+  
     <footer className="footer">
+         <section id="Contact">
       <h2>Contact</h2>
       <div className="footer-content">
         <a href="mailto:ttll33333@naver.com" className="footer-link">
@@ -21,8 +23,10 @@ const Footer = () => {
           <FaGithub className="footer-icon" /> GitHub account
         </a>
       </div>
+      </section>
       <button className="top-button" onClick={scrollToTop}>Top</button>
     </footer>
+  
   );
 };
 
