@@ -47,16 +47,24 @@ const Navbar = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 70; // 네비게이션 바의 높이에 맞게 조정
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
+  
 
   return (
     <nav className="navbar">
       <div className="logo">{logoText}</div>
       <ul className="nav-links">
         <li onClick={() => scrollToSection('home')}>Home</li>
-        <li onClick={() => scrollToSection('about')}>About</li>
+        <li onClick={() => scrollToSection('skills')}>skills</li>
         <li onClick={() => scrollToSection('education')}>Education</li>
         <li onClick={() => scrollToSection('certification')}>Certification & Awards</li>
         <li onClick={() => scrollToSection('projects')}>Side Projects</li>

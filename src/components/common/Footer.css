@@ -5,8 +5,10 @@
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     height: 200px;
-    margin-top: 20px;
-  }
+    width: 100%;
+    margin-top: 50px;
+    clear: both;
+}
   
   .footer h2 {
     font-size: 24px;
