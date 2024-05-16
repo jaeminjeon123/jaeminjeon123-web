@@ -1,13 +1,23 @@
-.project {
+.project-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .project {
     padding: 20px;
     text-align: center;
     margin: 0 auto;
-    max-width: 700px;
-    height: 100%;
+    width: 700px; /* 고정 너비 설정 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #b8a8c2;
+  }
+  .project:last-child {
+    border-bottom: none; /* 마지막 아이템에는 구분선 없음 */
   }
   
   h2 {
@@ -17,33 +27,32 @@
     text-align: center;
   }
   
-  .project-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
   .project-details {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; /* 이미지와 텍스트의 상단을 맞춤 */
     text-align: left;
+    width: 100%; /* 고정 너비에 맞추기 위해 100% 설정 */
   }
   
   .project-image {
-    width: 200px;
+    width: 370px;
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
+    flex-shrink: 0; 
   }
   
   .project-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
   }
   
   .project-text h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .project-text p {
@@ -67,6 +76,7 @@
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
+    width: 30%;
   }
   .project-text a:hover{
     background-color: #b8a8c2;
