@@ -46,8 +46,28 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+    console.log('Toggling menu. Current state:', menuOpen);
+    setMenuOpen((prev) => !prev);
   };
+
+  const handleClickOutside = (event) => {
+    const navbar = document.querySelector('.navbar');
+    if (navbar && !navbar.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuOpen]);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -69,7 +89,7 @@ const Navbar = () => {
       <div className="logo">{logoText}</div>
       <div className="menu-icon" onClick={toggleMenu}>☰</div>
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
-        <li onClick={() => scrollToSection('home')}>Home</li>
+        <li onClick={() => scrollToSection('About')}>About</li>
         <li onClick={() => scrollToSection('education')}>Education</li>
         <li onClick={() => scrollToSection('skills')}>Skills</li>
         <li onClick={() => scrollToSection('projects')}> Projects</li>
