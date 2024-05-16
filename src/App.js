@@ -7,6 +7,7 @@ import Footer from './components/common/Footer';
 import Navbar from './components/common/NavBar';
 import Education from './components/Education';
 import About from './components/About';
+import ProjectList from './components/ProjectList';
 function App() {
   return (
     <div className="App">
@@ -15,7 +16,7 @@ function App() {
         <About/>
       <Education/>
          <SkillsSection/>
-       
+         <ProjectList />
     
         <Footer/>
     </div>
