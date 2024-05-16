@@ -10,16 +10,21 @@
     text-align: center;
     margin: 0 auto;
     width: 700px; /* 고정 너비 설정 */
+    height: 300px; /* 고정 높이 설정 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #b8a8c2;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #a69eb0; /* 구분선 추가 */
   }
+
+
   .project:last-child {
-    border-bottom: none; /* 마지막 아이템에는 구분선 없음 */
-  }
-  
+  border-bottom: none; /* 마지막 아이템에는 구분선 없음 */
+}
+
   h2 {
     font-size: 24px;
     color: #a69eb0;
@@ -30,38 +35,41 @@
   .project-details {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* 이미지와 텍스트의 상단을 맞춤 */
+    align-items: center; /* 이미지와 텍스트의 중앙 정렬 */
     text-align: left;
     width: 100%; /* 고정 너비에 맞추기 위해 100% 설정 */
+    box-sizing: border-box;
   }
   
   .project-image {
-    width: 370px;
-    height: auto;
+    width: 380px;
+    height: 270px;
     border-radius: 10px;
     margin-right: 20px;
-    flex-shrink: 0; 
+    flex-shrink: 0; /* 이미지가 컨테이너 크기 변화에 영향을 받지 않도록 고정 */
   }
   
   .project-text {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center; /* 텍스트를 중앙에 수직 정렬 */
   }
   
   .project-text h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   
   .project-text p {
     font-size: 16px;
+    margin: 0 0 10px; /* 각 단락 간의 여백 설정 */
   }
   
   .project-text ul {
     list-style: none;
     padding: 0;
+    margin: 0 0 10px; /* 목록과 다음 요소 간의 여백 설정 */
   }
   
   .project-text ul li {
@@ -72,12 +80,16 @@
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #a69eb0;
+    font-size: 14px; /* 버튼 크기 조절 */
+    background:#a69eb0;;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    width: 30%;
+    transition: background 0.3s ease;
+    width: 25%;
   }
-  .project-text a:hover{
+  
+  .project-text a:hover {
     background-color: #b8a8c2;
   }
+  
