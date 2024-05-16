@@ -70,11 +70,10 @@ const Navbar = () => {
       <div className="menu-icon" onClick={toggleMenu}>☰</div>
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <li onClick={() => scrollToSection('home')}>Home</li>
-        <li onClick={() => scrollToSection('skills')}>Skills</li>
         <li onClick={() => scrollToSection('education')}>Education</li>
-        <li onClick={() => scrollToSection('certification')}>Certification & Awards</li>
-        <li onClick={() => scrollToSection('projects')}>Side Projects</li>
-        <li onClick={() => scrollToSection('contact')}>Contact</li>
+        <li onClick={() => scrollToSection('skills')}>Skills</li>
+        <li onClick={() => scrollToSection('projects')}> Projects</li>
+        <li onClick={() => scrollToSection('Contact')}>Contact</li>
       </ul>
     </nav>
   );
