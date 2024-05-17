@@ -20,13 +20,14 @@ const ProjectList = () => {
       title: "TETRIST",
       description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
       link: "https://github.com/sesac-laters-team/tetrist",
-      image: `${process.env.PUBLIC_URL}/tetrist.png`
+      image: `${process.env.PUBLIC_URL}/tetrist1.png`
     },
     // 더 많은 프로젝트를 추가할 수 있습니다.
   ];
 
   return (
     <div className="project-list">
+        <section id='projects'>
       <h2>Projects</h2>
       {projects.map((project, index) => (
         <Project
@@ -37,6 +38,7 @@ const ProjectList = () => {
           image={project.image}
         />
       ))}
+   </section>
     </div>
   );
 };
