@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Project from './Project';
 import './Project.css';
 
 const ProjectList = () => {
   const [activeProject, setActiveProject] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const projects = [
     {
@@ -30,7 +44,6 @@ const ProjectList = () => {
       image: `${process.env.PUBLIC_URL}/tetrist1.png`,
       retrospective: "실시간 대전 게임을 구현하며 실시간 통신의 중요성을 깨달았습니다."
     },
-    // 더 많은 프로젝트를 추가할 수 있습니다.
   ];
 
   const handleProjectClick = (id) => {
@@ -41,6 +54,7 @@ const ProjectList = () => {
     <div className="project-list">
       <section id="projects">
         <h2>Projects</h2>
+        {isMobile && <p className="click-message">프로젝트들을 클릭해보세요!</p>}
         {projects.map((project) => (
           <Project
             key={project.id}

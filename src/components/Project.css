@@ -139,9 +139,17 @@
 .project-text ul li {
   margin: 5px 0;
 }
+.click-message {
+  color: #a69eb0;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
 
-/* Responsive Design */
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .project {
     padding: 15px;
   }
