@@ -53,7 +53,14 @@
   font-weight: bold;
   color: #555;
 }
-
+.custom {
+  width: 45px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px; /* 아이콘 크기 조정 */
+}
 .careerCompany {
   font-size: 1em;
   margin: 5px 0;

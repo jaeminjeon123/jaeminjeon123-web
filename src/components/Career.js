@@ -19,7 +19,7 @@ const Career = () => {
         {careerData.map((job, index) => (
           <div key={index} className={styles.careerItem}>
             <div className={styles.careerHeader}>
-              <i className="fas fa-building"></i>
+            <i className={`fas fa-building ${styles.custom}`}></i>
               <span className={styles.careerPeriod}>{job.period}</span>
             </div>
             <div className={styles.careerContent}>
