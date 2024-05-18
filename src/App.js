@@ -8,6 +8,9 @@ import Navbar from './components/common/NavBar';
 import Education from './components/Education';
 import About from './components/About';
 import ProjectList from './components/ProjectList';
+
+import Career from './components/Career';
+
 function App() {
   return (
     <div className="App">
@@ -15,6 +18,7 @@ function App() {
       
         <About/>
       <Education/>
+      <Career/>
          <SkillsSection/>
          <ProjectList />
     

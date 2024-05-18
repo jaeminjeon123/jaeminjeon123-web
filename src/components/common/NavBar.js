@@ -91,6 +91,7 @@ const Navbar = () => {
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
         <li onClick={() => scrollToSection('About')}>About</li>
         <li onClick={() => scrollToSection('education')}>Education</li>
+        <li onClick={() => scrollToSection('career')}>Career</li>
         <li onClick={() => scrollToSection('skills')}>Skills</li>
         <li onClick={() => scrollToSection('projects')}> Projects</li>
         <li onClick={() => scrollToSection('Contact')}>Contact</li>

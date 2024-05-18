@@ -1,0 +1,103 @@
+.career {
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100%;
+}
+
+.career h2 {
+  font-size: 24px;
+  color: #a69eb0;
+  margin-bottom: 40px;
+}
+
+.careerList {
+  list-style: none;
+  padding: 0;
+}
+
+.careerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a69eb0; /* 구분선 추가 */
+}
+
+.careerItem:last-child {
+  border-bottom: none; /* 마지막 아이템에는 구분선 없음 */
+}
+
+.careerHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.careerHeader i {
+  font-size: 2em;
+  color: #a69eb0;
+  margin-right: 10px;
+  align-self: flex-start; /* 아이콘을 텍스트의 시작점에 맞추기 위해 추가 */
+}
+
+.careerContent {
+  text-align: left; /* 텍스트 정렬 */
+  width: 100%;
+}
+
+.careerPeriod {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #555;
+}
+
+.careerCompany {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #333;
+}
+
+.careerRoles {
+  font-size: 1em;
+  color: #777;
+}
+
+/* 반응형 미디어 쿼리 */
+@media (max-width: 768px) {
+  .careerContent {
+    text-align: left; /* 텍스트 가운데 정렬 */
+  }
+
+  .careerPeriod {
+    font-size: 1em;
+  }
+
+  .careerCompany {
+    font-size: 1em;
+  }
+
+  .careerRoles {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .career h2 {
+    font-size: 20px;
+  }
+
+  .careerPeriod {
+    font-size: 1em;
+  }
+
+  .careerCompany {
+    font-size: 1em;
+  }
+
+  .careerRoles {
+    font-size: 1em;
+  }
+}
