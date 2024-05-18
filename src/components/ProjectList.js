@@ -34,9 +34,7 @@ const ProjectList = () => {
   ];
 
   const handleProjectClick = (id) => {
-    if (window.innerWidth <= 1024) {
-      setActiveProject((prevActiveProject) => (prevActiveProject === id ? null : id));
-    }
+    setActiveProject((prevActiveProject) => (prevActiveProject === id ? null : id));
   };
 
   return (
@@ -46,7 +44,7 @@ const ProjectList = () => {
         {projects.map((project) => (
           <Project
             key={project.id}
-            id={project.id}  // id prop 전달
+            id={project.id}
             title={project.title}
             description={project.description}
             link={project.link}
