@@ -148,7 +148,11 @@
   animation: pulse 1.5s infinite;
 }
 
-
+.icon {
+  width: 20px; /* 원하는 크기로 조정 */
+  height: 20px; /* 원하는 크기로 조정 */
+  margin-right: 0.5em; /* 텍스트와의 간격 조정 */
+}
 @media (max-width: 1024px) {
   .project {
     padding: 15px;

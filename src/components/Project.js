@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import './Project.css';
 
 const Project = ({ id, title, description, link, image, retrospective, isActive, onClick }) => {
@@ -32,11 +35,17 @@ const Project = ({ id, title, description, link, image, retrospective, isActive,
 
   const handleClick = (e) => {
     if (!isMobile) {
-      // 컴퓨터에서는 클릭 이벤트를 무시
       e.preventDefault();
     } else {
       onClick(e);
     }
+  };
+
+  const renderIcon = () => {
+    if (link.includes('github.com')) {
+      return <FontAwesomeIcon icon={faGithub} />;
+    }
+    return <FontAwesomeIcon icon={faExternalLinkAlt} />;
   };
 
   return (
@@ -56,7 +65,9 @@ const Project = ({ id, title, description, link, image, retrospective, isActive,
       {(isActive || isHovered) && (
         <div className="project-retrospective">
           <p>{retrospective}</p>
-          <a href={link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>GoTo</a>
+          <a href={link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+            {renderIcon()} Visit
+          </a>
         </div>
       )}
     </div>
