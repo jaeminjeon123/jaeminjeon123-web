@@ -9,22 +9,20 @@ const skillsData = [
   { name: '', image: 'scss.png' },
   { name: '', image: 'type.png' },
   { name: '', image: 'node.png' },
-
 ];
 
 const SkillsSection = () => {
   return (
     <section id='skills'>
-    <div className="skills-section">
-        
-      <h2>Skills</h2>
-      <div className="skills-container">
-        {skillsData.map(skill => (
-          <SkillsCard key={skill.name} skill={skill} />
-        ))}
+      <div className="skills-section">
+        <h2>Skills</h2>
+        <div className="skills-container">
+          {skillsData.map((skill, index) => (
+            <SkillsCard key={index} skill={skill} />
+          ))}
+        </div>
       </div>
-    </div>
-   </section>
+    </section>
   );
 };
 

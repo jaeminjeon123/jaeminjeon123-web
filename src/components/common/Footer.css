@@ -8,7 +8,7 @@
     height: 100%;
     width: 100%;
     margin-top: 50px;
-    padding-bottom: 3%;
+    padding-bottom: 1%;
     box-sizing: border-box; 
     overflow: hidden;
     clear: both;
@@ -28,6 +28,7 @@
   }
   
   .footer-link {
+  
     color: #333;
     text-decoration: none;
     font-size: 18px;
@@ -42,6 +43,7 @@
   .footer-icon {
     margin-right: 8px;
     font-size: 24px;
+    color: #333;
   }
   
   .top-button {
@@ -76,4 +78,14 @@
     font-size: 15px;
     color: #888;
     margin-top: 20px;
+  }
+
+  @media (max-width: 638px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-link {
+      margin-bottom: -18px; /* 링크들 사이의 간격 조정 */
+  }
   }
