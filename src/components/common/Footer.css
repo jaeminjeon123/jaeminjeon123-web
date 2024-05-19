@@ -78,6 +78,7 @@
     font-size: 15px;
     color: #888;
     margin-top: 20px;
+    justify-content: center !important;
   }
 
   @media (max-width: 638px) {
