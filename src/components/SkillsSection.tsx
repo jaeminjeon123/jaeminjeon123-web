@@ -1,6 +1,6 @@
 import React from 'react';
 import './SkillsSection.css';
-import SkillsCard from './SkillsCard';
+import SkillsCard from './SkillsCard.tsx';
 
 interface Skill {
   name: string;

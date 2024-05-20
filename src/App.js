@@ -7,7 +7,7 @@ import Footer from './components/common/Footer.tsx';
 import Navbar from './components/common/NavBar.tsx';
 import Education from './components/Education.tsx';
 import About from './components/About.tsx';
-import ProjectList from './components/ProjectList';
+import ProjectList from './components/ProjectList.tsx';
 import Career from './components/Career.tsx';
 
 function App() {

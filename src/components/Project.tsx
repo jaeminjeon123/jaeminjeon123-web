@@ -4,7 +4,18 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import './Project.css';
 
-const Project = ({ id, title, description, link, image, retrospective, isActive, onClick }) => {
+interface ProjectProps {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  retrospective: string;
+  isActive: boolean;
+  onClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+}
+
+const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, retrospective, isActive, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -33,7 +44,7 @@ const Project = ({ id, title, description, link, image, retrospective, isActive,
     }
   };
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (!isMobile) {
       e.preventDefault();
     } else {

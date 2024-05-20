@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import Project from './Project';
+import Project from './Project.tsx';
 import './Project.css';
 
-const ProjectList = () => {
-  const [activeProject, setActiveProject] = useState(null);
+interface ProjectData {
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+  image: string;
+  retrospective: string;
+}
+
+
+const ProjectList: React.FC = () => {
+  const [activeProject, setActiveProject] = useState<number | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -19,7 +29,7 @@ const ProjectList = () => {
     };
   }, []);
 
-  const projects = [
+  const projects: ProjectData[] = [
     {
       id: 1,
       title: "병해 탐지 및 피해 현황 파악 서비스",
@@ -54,7 +64,7 @@ const ProjectList = () => {
     },
   ];
 
-  const handleProjectClick = (id) => {
+  const handleProjectClick = (id: number) => {
     setActiveProject((prevActiveProject) => (prevActiveProject === id ? null : id));
   };
 
