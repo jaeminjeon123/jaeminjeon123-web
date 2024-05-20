@@ -54,7 +54,9 @@
 .details {
   margin: 10px 0;
 }
-
+.details strong {
+  margin-right: 5px; /* strong 태그와 텍스트 사이의 간격을 조정합니다 */
+}
 .additional-info {
   margin-top: 20px;
   width: 100%;

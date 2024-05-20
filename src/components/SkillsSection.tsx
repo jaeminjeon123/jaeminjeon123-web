@@ -2,16 +2,21 @@ import React from 'react';
 import './SkillsSection.css';
 import SkillsCard from './SkillsCard';
 
-const skillsData = [
-  { name: '', image: 'react.png' },
-  { name: '', image: 'redux.png' },
-  { name: '', image: 'van.png' },
-  { name: '', image: 'scss.png' },
-  { name: '', image: 'type.png' },
-  { name: '', image: 'node.png' },
+interface Skill {
+  name: string;
+  image: string;
+}
+
+const skillsData: Skill[] = [
+  { name: 'React', image: 'react.png' },
+  { name: 'Redux', image: 'redux.png' },
+  { name: 'Vanilla JS', image: 'van.png' },
+  { name: 'SCSS', image: 'scss.png' },
+  { name: 'TypeScript', image: 'type.png' },
+  { name: 'Node.js', image: 'node.png' },
 ];
 
-const SkillsSection = () => {
+const SkillsSection: React.FC = () => {
   return (
     <section id='skills'>
       <div className="skills-section">
