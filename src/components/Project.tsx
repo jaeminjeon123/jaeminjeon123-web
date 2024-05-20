@@ -5,14 +5,14 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import './Project.css';
 
 interface ProjectProps {
-  id: string;
+  id: number;
   title: string;
   description: string;
   link: string;
   image: string;
   retrospective: string;
   isActive: boolean;
-  onClick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick: () => void;
 }
 
 const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, retrospective, isActive, onClick }) => {
@@ -44,11 +44,11 @@ const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, 
     }
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent) => {
     if (!isMobile) {
       e.preventDefault();
     } else {
-      onClick(e);
+      onClick();
     }
   };
 
