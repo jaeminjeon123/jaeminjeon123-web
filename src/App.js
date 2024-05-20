@@ -3,10 +3,10 @@ import './App.css';
 
 
 import SkillsSection from './components/SkillsSection';
-import Footer from './components/common/Footer';
-import Navbar from './components/common/NavBar';
+import Footer from './components/common/Footer.tsx';
+import Navbar from './components/common/NavBar.tsx';
 import Education from './components/Education';
-import About from './components/About';
+import About from './components/About.tsx';
 import ProjectList from './components/ProjectList';
 
 import Career from './components/Career';

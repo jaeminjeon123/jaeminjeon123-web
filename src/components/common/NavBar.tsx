@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './NavBar.css';
 
-const useTypingEffect = (textArray, typingSpeed = 150, pauseDuration = 2000) => {
+const useTypingEffect = (textArray: string[], typingSpeed: number = 150, pauseDuration: number = 2000) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,21 +41,21 @@ const useTypingEffect = (textArray, typingSpeed = 150, pauseDuration = 2000) => 
   return displayedText;
 };
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const logoText = useTypingEffect(['JunJaeMin', 'Frontend Developer'], 150, 5000);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     console.log('Toggling menu. Current state:', menuOpen);
     setMenuOpen((prev) => !prev);
-  };
+  }, [menuOpen]);
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event: MouseEvent) => {
     const navbar = document.querySelector('.navbar');
-    if (navbar && !navbar.contains(event.target)) {
+    if (navbar && !navbar.contains(event.target as Node)) {
       setMenuOpen(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (menuOpen) {
@@ -67,9 +67,9 @@ const Navbar = () => {
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [menuOpen]);
+  }, [menuOpen, handleClickOutside]);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       const headerOffset = 70; // 네비게이션 바의 높이에 맞게 조정
@@ -93,7 +93,7 @@ const Navbar = () => {
         <li onClick={() => scrollToSection('education')}>Education</li>
         <li onClick={() => scrollToSection('career')}>Career</li>
         <li onClick={() => scrollToSection('skills')}>Skills</li>
-        <li onClick={() => scrollToSection('projects')}> Projects</li>
+        <li onClick={() => scrollToSection('projects')}>Projects</li>
         <li onClick={() => scrollToSection('Contact')}>Contact</li>
       </ul>
     </nav>
