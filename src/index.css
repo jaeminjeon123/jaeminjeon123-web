@@ -1,5 +1,16 @@
+@font-face {
+  font-family: 'Interop';
+  src: url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff2')
+      format('woff2'),
+    url('https://raw.githubusercontent.com/payw-org/Interop/main/web/fonts/Interop-Regular.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 body {
-  font: normal 18px 'Roboto', 'Noto Sans KR';
+  /* font: normal 18px 'Roboto', 'Noto Sans KR'; */
+  font-family: 'Interop';
   font-weight: 400;
   line-height: 1;
   color: #333;

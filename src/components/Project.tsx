@@ -8,14 +8,14 @@ interface ProjectProps {
   id: number;
   title: string;
   description: string;
-  link: string;
+  links: { url: string; label: string }[];
   image: string;
   retrospective: string;
   isActive: boolean;
   onClick: () => void;
 }
 
-const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, retrospective, isActive, onClick }) => {
+const Project: React.FC<ProjectProps> = ({ id, title, description, links, image, retrospective, isActive, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -52,8 +52,8 @@ const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, 
     }
   };
 
-  const renderIcon = () => {
-    if (link.includes('github.com')) {
+  const renderIcon = (url: string) => {
+    if (url.includes('github.com')) {
       return <FontAwesomeIcon icon={faGithub} />;
     }
     return <FontAwesomeIcon icon={faExternalLinkAlt} />;
@@ -76,9 +76,17 @@ const Project: React.FC<ProjectProps> = ({ id, title, description, link, image, 
       {(isActive || isHovered) && (
         <div className="project-retrospective">
           <p>{retrospective}</p>
-          <a href={link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-            {renderIcon()} Visit
-          </a>
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {renderIcon(link.url)} {link.label}
+            </a>
+          ))}
         </div>
       )}
     </div>
