@@ -54,9 +54,9 @@ const Project: React.FC<ProjectProps> = ({ id, title, description, links, image,
 
   const renderIcon = (url: string) => {
     if (url.includes('github.com')) {
-      return <FontAwesomeIcon icon={faGithub} />;
+      return <FontAwesomeIcon icon={faGithub} className="icon" />;
     }
-    return <FontAwesomeIcon icon={faExternalLinkAlt} />;
+    return <FontAwesomeIcon icon={faExternalLinkAlt} className="icon" />;
   };
 
   return (
@@ -76,17 +76,19 @@ const Project: React.FC<ProjectProps> = ({ id, title, description, links, image,
       {(isActive || isHovered) && (
         <div className="project-retrospective">
           <p>{retrospective}</p>
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {renderIcon(link.url)} {link.label}
-            </a>
-          ))}
+          <div className="links">
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {renderIcon(link.url)} {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </div>

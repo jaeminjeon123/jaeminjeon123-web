@@ -8,12 +8,12 @@ interface Skill {
 }
 
 const skillsData: Skill[] = [
-  { name: 'React', image: 'react.png' },
-  { name: 'Redux', image: 'redux.png' },
-  { name: 'Vanilla JS', image: 'van.png' },
-  { name: 'SCSS', image: 'scss.png' },
-  { name: 'TypeScript', image: 'type.png' },
-  { name: 'Node.js', image: 'node.png' },
+  { name: '', image: 'react.png' },
+  { name: '', image: 'redux.png' },
+  { name: '', image: 'javascript.png' },
+  { name: '', image: 'scss.png' },
+  { name: '', image: 'type.png' },
+  { name: '', image: 'node.png' },
 ];
 
 const SkillsSection: React.FC = () => {

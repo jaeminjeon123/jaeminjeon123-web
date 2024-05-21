@@ -12,13 +12,14 @@
   box-sizing: border-box;
   margin-bottom: 30px;
   border-bottom: 1px solid #a69eb0;
-  cursor: pointer;
 }
+
 #projects {
   width: 100%;
   text-align: center; /* h2 요소를 중앙에 배치 */
   color: #a69eb0;
 }
+
 .project-details, .project-retrospective {
   transition: opacity 0.3s ease, visibility 0.3s ease;
   display: block;
@@ -49,6 +50,12 @@
   line-height: 1.8; /* 줄 간격을 위해 추가 */
 }
 
+.project-retrospective .links {
+  display: flex;
+  gap: 10px; /* 링크 간의 간격을 추가 */
+  margin-top: 10px;
+}
+
 .project:hover .project-details, .project.active .project-details {
   opacity: 0;
   visibility: hidden;
@@ -61,7 +68,6 @@
 
 .project-text a, .project-retrospective a {
   display: inline-block;
-  margin-top: 10px;
   padding: 10px 15px;
   font-size: 14px;
   background: #a69eb0;
@@ -69,9 +75,6 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-
-  opacity: 0;
-  visibility: hidden;
 }
 
 .project-text a:hover, .project-retrospective a:hover {
@@ -142,6 +145,7 @@
 .project-text ul li {
   margin: 5px 0;
 }
+
 .click-message {
   color: #a69eb0;
   font-size: 18px;
@@ -156,6 +160,7 @@
   height: 20px; /* 원하는 크기로 조정 */
   margin-right: 0.5em; /* 텍스트와의 간격 조정 */
 }
+
 @media (max-width: 1024px) {
   .project {
     padding: 15px;
@@ -186,5 +191,10 @@
 
   .project-text a, .project-retrospective a {
     font-size: 12px;
+  }
+
+  .project-retrospective .links {
+    flex-direction: column;
+    align-items: center;
   }
 }
