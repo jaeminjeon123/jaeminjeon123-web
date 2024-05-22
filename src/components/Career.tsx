@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Career.module.css';
+import styles from './Career.module.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 interface CareerData {
@@ -14,7 +14,7 @@ const careerData: CareerData[] = [
     company: '원더베리',
     roles: [
       'QA: 사용자 경험 향상을 위한 지속적인 피드백을 제공하였습니다',
-      '제안서 작성: 고객 요구사항을 분석하여 , 설득력 있는 제안서를 작성하였습니다',
+      '제안서 작성: 고객 요구사항을 분석하여, 설득력 있는 제안서를 작성하였습니다',
     ],
   },
 ];

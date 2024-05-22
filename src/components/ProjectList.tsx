@@ -26,7 +26,7 @@ const ProjectList: React.FC = () => {
       description: "병해를 판별해 사용자에게 결과를 알려주고, 신고 기능과 지도로 피해 현황을 제공하여 예방에 도움을 주는 서비스",
       links: [
         { url: "https://github.com/TellMeThe-Answer/Client/tree/jeonjaemin", label: "GitHub" },
-        { url: "https://example.com/second-link", label: "Notion" }
+        { url: "https://www.notion.so/9f656dfc7e5647099683985880edfff5?pvs=4", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/first.png`,
       retrospective: ""
@@ -37,7 +37,7 @@ const ProjectList: React.FC = () => {
       description: "구인 공고 공유 사이트 개발자들을 위한 취업정보(채용정보) 공유 사이트",
       links: [
         { url: "https://github.com/jaeminjeon123/CCC", label: "GitHub" },
-        { url: "https://example.com/second-link", label: "Notion" }
+        { url: "https://www.notion.so/9087af1768cb42cc80912ffd8a1c3253?pvs=4", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/ccc.png`,
       retrospective: ""
@@ -48,7 +48,7 @@ const ProjectList: React.FC = () => {
       description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
       links: [
         { url: "https://github.com/sesac-laters-team/tetrist", label: "GitHub" },
-        { url: "https://example.com/second-link", label: "Notion" }
+        { url: "https://www.notion.so/5b716565b29d4cf694abc3bb3b842d50?pvs=4", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/tetrist1.png`,
       retrospective: ""
@@ -56,10 +56,10 @@ const ProjectList: React.FC = () => {
     {
       id: 4,
       title: "포트폴리오",
-      description: "리액트로 만든 슴슴한 포트폴리오",
+      description: "리액트를 곁들인 평양냉면같은 슴슴한 포트폴리오",
       links: [
         { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
-        { url: "https://example.com/second-link", label: "Notion" }
+        { url: "https://www.notion.so/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c?pvs=4", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/por.png`,
       retrospective: ""

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
-import './Footer.css';
+import './Footer.scss';
 
 const Footer = () => {
   const scrollToTop = () => {

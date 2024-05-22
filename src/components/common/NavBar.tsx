@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import './NavBar.css';
+import './NavBar.scss';
 
-const useTypingEffect = (textArray: string[], typingSpeed: number = 150, pauseDuration: number = 2000) => {
+const useTypingEffect = (textArray, typingSpeed = 150, pauseDuration = 2000) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -41,18 +41,17 @@ const useTypingEffect = (textArray: string[], typingSpeed: number = 150, pauseDu
   return displayedText;
 };
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const logoText = useTypingEffect(['JunJaeMin', 'Frontend Developer'], 150, 5000);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = useCallback(() => {
-    console.log('Toggling menu. Current state:', menuOpen);
     setMenuOpen((prev) => !prev);
-  }, [menuOpen]);
+  }, []);
 
-  const handleClickOutside = useCallback((event: MouseEvent) => {
+  const handleClickOutside = useCallback((event) => {
     const navbar = document.querySelector('.navbar');
-    if (navbar && !navbar.contains(event.target as Node)) {
+    if (navbar && !navbar.contains(event.target)) {
       setMenuOpen(false);
     }
   }, []);
@@ -69,13 +68,13 @@ const Navbar: React.FC = () => {
     };
   }, [menuOpen, handleClickOutside]);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       const headerOffset = 70; // 네비게이션 바의 높이에 맞게 조정
       const elementPosition = section.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-  
+
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
@@ -85,7 +84,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${menuOpen ? 'expanded' : ''}`}>
       <div className="logo">{logoText}</div>
       <div className="menu-icon" onClick={toggleMenu}>☰</div>
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
