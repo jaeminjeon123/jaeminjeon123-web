@@ -27,6 +27,9 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: echo > build/.nojekyll
+
       - name: Configure git for deployment
         run: |
           git config --global user.email "jaeminjeon123@gmail.com"
@@ -38,4 +41,3 @@ jobs:
         run: |
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           npm run deploy
- 
