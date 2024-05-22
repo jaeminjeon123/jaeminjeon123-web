@@ -23,7 +23,7 @@ const Footer = () => {
           </a>
         </div>
       </section>
-      <button className="top-button" onClick={scrollToTop}>Top</button>
+      <button className="top-button" onClick={scrollToTop}>TOP</button>
       <p className="small-text">Made with React</p>
     </footer>
   );
