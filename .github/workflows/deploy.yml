@@ -11,12 +11,20 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # 최신 버전 사용
+        uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3  # 최신 버전 사용
+        uses: actions/setup-node@v2
         with:
-          node-version: '20'  # 최신 Node.js 버전 사용
+          node-version: '14'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-v1  # 캐시 키 추가
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         run: npm install
@@ -30,8 +38,14 @@ jobs:
       - name: Create .nojekyll file
         run: echo > build/.nojekyll
 
+      - name: Configure git for deployment
+        run: |
+          git config --global user.email "jaeminjeon123@gmail.com"
+          git config --global user.name "jaeminjeon123"
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          npm run deploy
