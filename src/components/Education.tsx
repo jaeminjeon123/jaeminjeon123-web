@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Education.module.css';
+import styles from './Education.module.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 interface EducationData {

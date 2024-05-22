@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Project from './Project.tsx';
-import './Project.css';
+import './Project.scss';
 
 const ProjectList: React.FC = () => {
   const [activeProject, setActiveProject] = useState<number | null>(null);
@@ -56,7 +56,7 @@ const ProjectList: React.FC = () => {
     {
       id: 4,
       title: "포트폴리오",
-      description: "리액트를 곁들인 평양냉면같은 슴슴한 포트폴리오",
+      description: "리액트를 곁들인 평양냉면 같은 슴슴한 포트폴리오",
       links: [
         { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
         { url: "https://www.notion.so/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c?pvs=4", label: "Notion" }

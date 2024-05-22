@@ -9,19 +9,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.skills-card img {
-  max-width: 100px;
-  margin-bottom: 20px;
-}
+  img {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
 
-.skills-card:hover {
-  transform: translateY(-10px);
-}
+  &:hover {
+    transform: translateY(-10px);
+  }
 
-.skills-card h3 {
-  font-size: 18px;
-  margin: 0;
-  font-weight: bold;
+  h3 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './SkillsCard.css';
+import './SkillsCard.scss';
 
 interface Skill {
   name: string;

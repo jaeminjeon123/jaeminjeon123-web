@@ -1,5 +1,5 @@
 import React from 'react';
-import './SkillsSection.css';
+import './SkillsSection.scss';
 import SkillsCard from './SkillsCard.tsx';
 
 interface Skill {
