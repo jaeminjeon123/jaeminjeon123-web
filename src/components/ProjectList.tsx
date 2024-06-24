@@ -45,7 +45,7 @@ const ProjectList: React.FC = () => {
     {
       id: 3,
       title: "Ramyun Lab",
-      description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
+      description: "원하는 라면을 손쉽게 찾을 수 있는 라면 모음 사이트",
       links: [
         { url: "https://github.com/RamyunLab/ramyunlab-fe", label: "GitHub" },
         { url: "https://www.notion.so/Ramyun-Lab-0553dbaf6aed48a283a42fe1c5e614ac?pvs=4", label: "Notion" }
