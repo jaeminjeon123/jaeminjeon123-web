@@ -9,6 +9,7 @@ import Education from './components/Education.tsx';
 import About from './components/About.tsx';
 import ProjectList from './components/ProjectList.tsx';
 import Career from './components/Career.tsx';
+import SideList from './components/SideList.tsx';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       <Career/>
          <SkillsSection/>
          <ProjectList />
-    
+        <SideList/>
         <Footer/>
     </div>
   );

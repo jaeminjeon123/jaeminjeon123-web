@@ -8,12 +8,15 @@ interface Skill {
 }
 
 const skillsData: Skill[] = [
-  { name: '', image: 'react.png' },
-  { name: '', image: 'redux.png' },
-  { name: '', image: 'javascript.png' },
-  { name: '', image: 'scss.png' },
-  { name: '', image: 'type.png' },
-  { name: '', image: 'node.png' },
+  { name: '',  image: `${process.env.PUBLIC_URL}/react.png`, },
+
+  { name: '',  image: `${process.env.PUBLIC_URL}/redux.png`, },
+ 
+  { name: '',  image: `${process.env.PUBLIC_URL}/javascript.png`, },
+  { name: '',  image: `${process.env.PUBLIC_URL}/scss.png`, },
+  { name: '',  image: `${process.env.PUBLIC_URL}/type.png`, },
+  { name: '',  image: `${process.env.PUBLIC_URL}/query.png`, },
+ 
 ];
 
 const SkillsSection: React.FC = () => {

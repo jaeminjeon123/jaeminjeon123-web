@@ -44,26 +44,26 @@ const ProjectList: React.FC = () => {
     },
     {
       id: 3,
-      title: "TETRIST",
+      title: "Ramyun Lab",
       description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
       links: [
-        { url: "https://github.com/sesac-laters-team/tetrist", label: "GitHub" },
-        { url: "https://www.notion.so/5b716565b29d4cf694abc3bb3b842d50?pvs=4", label: "Notion" }
+        { url: "https://github.com/RamyunLab/ramyunlab-fe", label: "GitHub" },
+        { url: "https://www.notion.so/Ramyun-Lab-0553dbaf6aed48a283a42fe1c5e614ac?pvs=4", label: "Notion" }
       ],
-      image: `${process.env.PUBLIC_URL}/tetrist1.png`,
+      image: `${process.env.PUBLIC_URL}/ramyun1.png`,
       retrospective: ""
     },
-    {
-      id: 4,
-      title: "포트폴리오",
-      description: "리액트를 곁들인 평양냉면 같은 슴슴한 포트폴리오",
-      links: [
-        { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
-        { url: "https://www.notion.so/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c?pvs=4", label: "Notion" }
-      ],
-      image: `${process.env.PUBLIC_URL}/por.png`,
-      retrospective: ""
-    },
+    // {
+    //   id: 4,
+    //   title: "포트폴리오",
+    //   description: "리액트를 곁들인 평양냉면 같은 슴슴한 포트폴리오",
+    //   links: [
+    //     { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
+    //     { url: "https://www.notion.so/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c?pvs=4", label: "Notion" }
+    //   ],
+    //   image: `${process.env.PUBLIC_URL}/por.png`,
+    //   retrospective: ""
+    // },
     
   ];
 
