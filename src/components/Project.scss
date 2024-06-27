@@ -24,15 +24,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* 투명도를 위해 rgba 사용 */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 10000;
     visibility: hidden;
     padding: 20px;
     box-sizing: border-box;
+    backdrop-filter: blur(0px); /* 배경을 블러 처리하여 뒤의 요소들이 살짝 보이게 함 */
 
     p {
       font-size: 15px;
@@ -72,12 +73,11 @@
   }
 
   &:hover &-details, &.active &-details {
-    opacity: 0;
-    visibility: hidden;
+    opacity: 10000; /* 배경 요소들이 살짝 보이게 투명도 조정 */
   }
 
   &:hover &-retrospective, &.active &-retrospective {
-    opacity: 1;
+    opacity: 10000;
     visibility: visible;
   }
 
