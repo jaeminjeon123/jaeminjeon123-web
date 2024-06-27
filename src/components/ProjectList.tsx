@@ -22,15 +22,16 @@ const ProjectList: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: "병해 탐지 및 피해 현황 파악 서비스",
-      description: "병해를 판별해 사용자에게 결과를 알려주고, 신고 기능과 지도로 피해 현황을 제공하여 예방에 도움을 주는 서비스",
+      title: "Ramyun Lab",
+      description: "원하는 라면을 손쉽게 찾을 수 있는 라면 모음 사이트",
       links: [
-        { url: "https://github.com/TellMeThe-Answer/Client/tree/jeonjaemin", label: "GitHub" },
-        { url: "https://www.notion.so/9f656dfc7e5647099683985880edfff5?pvs=4", label: "Notion" }
+        { url: "https://github.com/RamyunLab/ramyunlab-fe", label: "GitHub" },
+        { url: "https://www.notion.so/Ramyun-Lab-0553dbaf6aed48a283a42fe1c5e614ac?pvs=4", label: "Notion" }
       ],
-      image: `${process.env.PUBLIC_URL}/first.png`,
+      image: `${process.env.PUBLIC_URL}/ramyun1.png`,
       retrospective: ""
     },
+  
     {
       id: 2,
       title: "커리어허브",
@@ -44,15 +45,16 @@ const ProjectList: React.FC = () => {
     },
     {
       id: 3,
-      title: "Ramyun Lab",
-      description: "원하는 라면을 손쉽게 찾을 수 있는 라면 모음 사이트",
+      title: "병해 탐지 및 피해 현황 파악 서비스",
+      description: "병해를 판별해 사용자에게 결과를 알려주고, 신고 기능과 지도로 피해 현황을 제공하여 예방에 도움을 주는 서비스",
       links: [
-        { url: "https://github.com/RamyunLab/ramyunlab-fe", label: "GitHub" },
-        { url: "https://www.notion.so/Ramyun-Lab-0553dbaf6aed48a283a42fe1c5e614ac?pvs=4", label: "Notion" }
+        { url: "https://github.com/TellMeThe-Answer/Client/tree/jeonjaemin", label: "GitHub" },
+        { url: "https://www.notion.so/9f656dfc7e5647099683985880edfff5?pvs=4", label: "Notion" }
       ],
-      image: `${process.env.PUBLIC_URL}/ramyun1.png`,
+      image: `${process.env.PUBLIC_URL}/first.png`,
       retrospective: ""
     },
+    
     // {
     //   id: 4,
     //   title: "포트폴리오",
