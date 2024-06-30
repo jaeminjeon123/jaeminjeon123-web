@@ -18,7 +18,7 @@ const Footer = () => {
           <a href="tel:010-4555-3910" className="footer-link">
             <FaPhone className="footer-icon" /> 010-4555-3910
           </a>
-          <a href="https://github.com/jaeminjeon123?tab=repositories" target="_blank" rel="noopener noreferrer" className="footer-link">
+          <a href="https://github.com/jaeminjeon123" target="_blank" rel="noopener noreferrer" className="footer-link">
             <FaGithub className="footer-icon" /> GitHub account
           </a>
         </div>
