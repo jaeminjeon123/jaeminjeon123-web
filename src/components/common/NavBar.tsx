@@ -44,6 +44,7 @@ const useTypingEffect = (textArray, typingSpeed = 150, pauseDuration = 2000) => 
 const Navbar = () => {
   const logoText = useTypingEffect(['JunJaeMin', 'Frontend Developer'], 150, 5000);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   const toggleMenu = useCallback(() => {
     setMenuOpen((prev) => !prev);
@@ -83,18 +84,40 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log(`${entry.target.id} is intersecting`);
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust threshold as needed
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <nav className={`navbar ${menuOpen ? 'expanded' : ''}`}>
       <div className="logo">{logoText}</div>
       <div className="menu-icon" onClick={toggleMenu}>☰</div>
       <ul className={`nav-links ${menuOpen ? 'show' : ''}`}>
-        <li onClick={() => scrollToSection('About')}>About</li>
-        <li onClick={() => scrollToSection('education')}>Education</li>
-        <li onClick={() => scrollToSection('career')}>Career</li>
-        <li onClick={() => scrollToSection('skills')}>Skills</li>
-        <li onClick={() => scrollToSection('projects')}>Projects</li>
-        <li onClick={() => scrollToSection('Side')}>Side</li>
-        <li onClick={() => scrollToSection('Contact')}>Contact</li>
+        <li className={activeSection === 'About' ? 'active' : ''} onClick={() => scrollToSection('About')}>About</li>
+        <li className={activeSection === 'education' ? 'active' : ''} onClick={() => scrollToSection('education')}>Education</li>
+        <li className={activeSection === 'career' ? 'active' : ''} onClick={() => scrollToSection('career')}>Career</li>
+        <li className={activeSection === 'skills' ? 'active' : ''} onClick={() => scrollToSection('skills')}>Skills</li>
+        <li className={activeSection === 'projects' ? 'active' : ''} onClick={() => scrollToSection('projects')}>Projects</li>
+        <li className={activeSection === 'Side' ? 'active' : ''} onClick={() => scrollToSection('Side')}>Side</li>
+        <li className={activeSection === 'Contact' ? 'active' : ''} onClick={() => scrollToSection('Contact')}>Contact</li>
       </ul>
     </nav>
   );
