@@ -6,7 +6,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /* 요소들을 수직 중앙 정렬 */
   background-color: #f0f0f0;
   padding: 5px 20px;
   position: fixed;
@@ -16,15 +16,19 @@
   max-width: 100%;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px; /* 네비게이션 바의 고정 높이 설정 */
 
   .logo {
     font-size: 24px;
     font-weight: bold;
     margin-left: 11%;
-    white-space: nowrap; // 텍스트가 줄바꿈되지 않도록 설정
-    transition: opacity 0.3s ease-in-out; // 텍스트 변경 시 부드럽게 전환
-    width: 200px; // 고정된 너비 설정
-    text-align: center; // 텍스트 중앙 정렬
+    white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+    transition: opacity 0.3s ease-in-out; /* 텍스트 변경 시 부드럽게 전환 */
+    width: 200px; /* 고정된 너비 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    display: flex;
+    align-items: center; /* 텍스트를 수직 중앙 정렬 */
+    height: 100%; /* 부모 요소 높이에 맞춤 */
   }
 
   .nav-links {
@@ -33,6 +37,8 @@
     gap: 20px;
     margin-right: 11%;
     padding: 0;
+    height: 100%; /* 부모 요소 높이에 맞춤 */
+    align-items: center; /* 링크들을 수직 중앙 정렬 */
 
     li {
       cursor: pointer;
@@ -69,6 +75,7 @@
 
     .logo {
       margin-left: 5%;
+      margin-top: 8px;
     }
 
     .menu-icon {
@@ -91,8 +98,8 @@
 .menu-icon {
   display: none;
 }
+
 .nav-links li.active {
   color: hsl(266, 25%, 57%);
   font-weight: bold;
- 
 }
