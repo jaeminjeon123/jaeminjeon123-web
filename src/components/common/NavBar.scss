@@ -29,6 +29,7 @@
     display: flex;
     align-items: center; /* 텍스트를 수직 중앙 정렬 */
     height: 100%; /* 부모 요소 높이에 맞춤 */
+   
   }
 
   .nav-links {
@@ -75,7 +76,8 @@
 
     .logo {
       margin-left: 5%;
-      margin-top: 8px;
+      min-height: 60px;
+      margin-top: -10px;
     }
 
     .menu-icon {
@@ -102,4 +104,14 @@
 .nav-links li.active {
   color: hsl(266, 25%, 57%);
   font-weight: bold;
+}
+/* 커서 애니메이션을 제거하기 위한 CSS */
+.typing-effect {
+  position: relative;
+  /* 기존 커서 애니메이션 속성 제거 */
+  &::after {
+    content: '';
+    /* visibility: hidden; */ /* 커서를 숨기는 속성 */
+    display: none; /* 커서 요소를 완전히 제거 */
+  }
 }
