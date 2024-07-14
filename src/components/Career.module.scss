@@ -47,9 +47,9 @@
       }
 
       .careerPeriod {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #555;
+        // font-size: 1.2em;
+        //   font-weight: bold;
+          color: #555;
       }
 
       .custom {
@@ -67,9 +67,10 @@
         color: #333;
       }
 
-      .careerRoles {
-        font-size: 1em;
-        color: #777;
+      .careerRole {
+        
+        font-size: 1em !important;
+        color: #777 !important;
       }
     }
   }

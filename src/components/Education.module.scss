@@ -43,11 +43,7 @@
       .educationContent {
         text-align: left; /* 텍스트 정렬 */
 
-        .educationYear {
-          font-size: 1.2em;
-          font-weight: bold;
-          color: #555;
-        }
+     
 
         .educationDegree {
           font-size: 1em;
@@ -62,4 +58,9 @@
       }
     }
   }
+}
+.educationYear {
+  // font-size: 1.2em !important;
+  // font-weight: bold;
+  color: #555;
 }
