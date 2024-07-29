@@ -27,7 +27,7 @@ const SideList: React.FC = () => {
       description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
       links: [
         { url: "https://github.com/sesac-laters-team/tetrist", label: "GitHub" },
-        { url: "https://www.notion.so/5b716565b29d4cf694abc3bb3b842d50?pvs=4", label: "Notion" }
+        { url: "https://aboard-diadem-6cc.notion.site/5b716565b29d4cf694abc3bb3b842d50", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/tetrist1.png`,
       retrospective: ""
@@ -38,7 +38,7 @@ const SideList: React.FC = () => {
       description: "리액트로 만든 평양냉면 같은 슴슴한 포트폴리오",
       links: [
         { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
-        { url: "https://www.notion.so/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c?pvs=4", label: "Notion" }
+        { url: "https://aboard-diadem-6cc.notion.site/b3ddd6c5f89b4e9e81d4ff2d5efc3f6c", label: "Notion" }
       ],
       image: `${process.env.PUBLIC_URL}/por.png`,
       retrospective: ""
