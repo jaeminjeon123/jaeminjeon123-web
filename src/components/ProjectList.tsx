@@ -24,6 +24,7 @@ const ProjectList: React.FC = () => {
       id: 1,
       title: "Ramyun Lab",
       description: "원하는 라면을 손쉽게 찾을 수 있는 라면 모음 사이트",
+      stack: "React, Redux, Scss, TypeScript, React-Query, RESTful API ",
       links: [
         { url: "https://github.com/RamyunLab/ramyunlab-fe", label: "GitHub" },
         { url: "https://aboard-diadem-6cc.notion.site/Ramyun-Lab-0553dbaf6aed48a283a42fe1c5e614ac", label: "Notion" }
@@ -35,6 +36,7 @@ const ProjectList: React.FC = () => {
     {
       id: 2,
       title: "커리어허브",
+      stack: "바닐라 JS",
       description: "구인 공고 공유 사이트 개발자들을 위한 취업정보(채용정보) 공유 사이트",
       links: [
         { url: "https://github.com/jaeminjeon123/CCC", label: "GitHub" },
@@ -46,6 +48,7 @@ const ProjectList: React.FC = () => {
     {
       id: 3,
       title: "병해 탐지 및 피해 현황 파악 서비스",
+      stack: "React",
       description: "병해를 판별해 사용자에게 결과를 알려주고, 신고 기능과 지도로 피해 현황을 제공하여 예방에 도움을 주는 서비스",
       links: [
         { url: "https://github.com/TellMeThe-Answer/Client/tree/jeonjaemin", label: "GitHub" },
@@ -82,6 +85,7 @@ const ProjectList: React.FC = () => {
           <Project
             key={project.id}
             id={project.id}
+            stack={project.stack}
             title={project.title}
             description={project.description}
             links={project.links}

@@ -24,7 +24,9 @@ const SideList: React.FC = () => {
     {
       id: 1,
       title: "TETRIST",
+      stack: "React, Redux, Socket.IO, Scss",
       description: "웹 socket과 react를 사용해서 구현한 1:1 레트로 감성의 대전 테트리스 게임",
+      
       links: [
         { url: "https://github.com/sesac-laters-team/tetrist", label: "GitHub" },
         { url: "https://aboard-diadem-6cc.notion.site/5b716565b29d4cf694abc3bb3b842d50", label: "Notion" }
@@ -35,6 +37,7 @@ const SideList: React.FC = () => {
     {
       id: 2,
       title: "포트폴리오",
+      stack: "React, TypeScript, Scss",
       description: "리액트로 만든 평양냉면 같은 슴슴한 포트폴리오",
       links: [
         { url: "https://github.com/jaeminjeon123/jaeminjeon123-web", label: "GitHub" },
@@ -59,7 +62,9 @@ const SideList: React.FC = () => {
           < Side
             key={project.id}
             id={project.id}
+            
             title={project.title}
+            stack={project.stack}
             description={project.description}
             links={project.links}
             image={project.image}

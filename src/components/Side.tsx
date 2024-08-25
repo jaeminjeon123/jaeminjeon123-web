@@ -8,6 +8,7 @@ interface ProjectProps {
   id: number;
   title: string;
   description: string;
+  stack: string;  // 추가된 부분
   links: { url: string; label: string }[];
   image: string;
   retrospective: string;
@@ -15,7 +16,17 @@ interface ProjectProps {
   onClick: () => void;
 }
 
-const Side: React.FC<ProjectProps> = ({ id, title, description, links, image, retrospective, isActive, onClick }) => {
+const Side: React.FC<ProjectProps> = ({
+  id,
+  title,
+  description,
+  stack, // 추가된 부분
+  links,
+  image,
+  retrospective,
+  isActive,
+  onClick
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -70,6 +81,7 @@ const Side: React.FC<ProjectProps> = ({ id, title, description, links, image, re
         <img src={image} alt={title} className="project-image" />
         <div className="project-text">
           <h2>{title}</h2>
+          <p><strong>사용한 기술 스택   </strong> {stack}</p> {/* 추가된 부분 */}
           <p>{description}</p>
         </div>
       </div>
