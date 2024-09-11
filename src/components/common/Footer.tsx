@@ -12,8 +12,8 @@ const Footer = () => {
       <section id="Contact">
         <h2>Contact</h2>
         <div className="footer-content">
-          <a href="mailto:ttll33333@naver.com" className="footer-link">
-            <FaEnvelope className="footer-icon" /> ttll33333@naver.com
+          <a href="mailto:ttll3333@naver.com" className="footer-link">
+            <FaEnvelope className="footer-icon" /> ttll3333@naver.com
           </a>
           <a href="tel:010-4555-3910" className="footer-link">
             <FaPhone className="footer-icon" /> 010-4555-3910

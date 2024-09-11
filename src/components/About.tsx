@@ -14,7 +14,7 @@ const About: React.FC = () => {
               <div className="details">
                 <p><strong>Name:</strong> 전재민</p>
                 <p><strong>Address:</strong> 서울시 강서구</p>
-                <p><strong>Email:</strong> ttll33333@naver.com</p>
+                <p><strong>Email:</strong> ttll3333@naver.com</p>
                 <p><strong>Phone:</strong> +82-10-4555-3910</p>
               </div>
             </div>
