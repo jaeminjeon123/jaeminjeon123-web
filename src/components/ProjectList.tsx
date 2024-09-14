@@ -47,7 +47,7 @@ const ProjectList: React.FC = () => {
     },
     {
       id: 3,
-      title: "병해 탐지 및 피해 현황 파악 서비스",
+      title: "모두의 병해",
       stack: "React",
       description: "병해를 판별해 사용자에게 결과를 알려주고, 신고 기능과 지도로 피해 현황을 제공하여 예방에 도움을 주는 서비스",
       links: [
